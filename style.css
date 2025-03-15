@@ -1,4 +1,6 @@
-body {
-    font-family: 'Silkscreen';font-size: 22px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 
+body {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 22px;
+}
