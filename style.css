@@ -1,11 +1,119 @@
 @font-face {
-    font-family: 'Silkscreen';
-    src: url('fonts/Silkscreen-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Pixelify";
+  src: url("fonts/PixelifySans-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#header {
+  text-align: left;
 }
 
 body {
-    font-family: 'Silkscreen', sans-serif;
-    font-size: 22px;
+  text-align: center;
+  margin-top: 1%;
 }
+
+#container {
+  display: flex;
+}
+
+#center {
+  margin: auto;
+}
+
+h1 {
+  display: flex;
+  overflow: hidden;
+  font-family: "Pixelify", sans-serif;
+  font-size: 60px;
+  border-right: 0.15em solid black; /* Caret color in light mode */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  animation: typing 1.3s steps(10, end),
+    blink-caret 0.75s steps(50, end) infinite;
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black; 
+  }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+
+body.dark-mode h1 {
+  border-color: white; /* Change caret color to white in dark mode */
+}
+
+
+body.dark-mode h1 {
+  animation: typing 1.3s steps(10, end),
+    blink-caret-dark 0.75s steps(50, end) infinite;
+}
+
+
+@keyframes blink-caret-dark {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+
+mark.blue {
+  color: #1271a9;
+  background: none;
+  display: inline-block;
+  margin-left: 8px; /* Adds a small space */
+}
+
+button {
+    background-color: #1271a9;
+    border: none;
+    padding: 10px 20px; /* Adjust padding for consistent button size */
+    color: white;
+    font-size: 18px;
+    font-family: "Pixelify", sans-serif;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    border-radius: 5px;
+    min-width: 100px;
+    min-height: 40px; 
+    display: inline-block;
+    text-align: center;
+  }
+  
+  button:hover {
+    background-color: #0e5b8a;
+  }
+  
+  button.dark-mode {
+    background-color: #ffffff;
+    color: #121212;
+  }
+  
