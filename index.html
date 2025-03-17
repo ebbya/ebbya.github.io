@@ -13,21 +13,51 @@
         <h1>Hi, I'm <mark class="blue">Ebba</mark>!</h1>
       </div>
     </div>
+    <h3>Developer & Data Scientist</h3>
+    <p>I'm a Computer Science student at KTH.</p>
+    <div id="container">
+      <div id="left">
+        <h2>About me</h2>
+        <div class="about-columns">
+          <div class="column">
+            <p>I'm a 24-year-old mega-nerd from Sweden.</p>
+            <p>I specialize in data analysis, but I'm also experienced in front-end development and design, back-end development and database management.</p>
+          </div>
+          <div class="column">
+            <h4>Skills</h4>
+            <p>Blahonga.</p>
+            <h4>Education</h4>
+            <p>Blahonga.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="left">
+        <h2>My Projects</h2>
+      </div>
+    </div>
+    <div id="container">
+      <div id="center">
+        <h2>Get in Touch</h2>
+        <p>Feel free to contact me on my email below!</p>
+      </div>
+    </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const button = document.getElementById('dark-mode-toggle');
+      document.addEventListener("DOMContentLoaded", () => {
+        const button = document.getElementById("dark-mode-toggle");
         const body = document.body;
 
-        button.addEventListener('click', () => {
+        button.addEventListener("click", () => {
           // Toggle the dark mode class on the body
-          body.classList.toggle('dark-mode');
+          body.classList.toggle("dark-mode");
 
           // Change the button text based on the mode
-          if (body.classList.contains('dark-mode')) {
-            button.textContent = 'Light';
+          if (body.classList.contains("dark-mode")) {
+            button.textContent = "Light";
           } else {
-            button.textContent = 'Dark';
+            button.textContent = "Dark";
           }
         });
       });
