@@ -8,7 +8,7 @@
 @font-face {
   font-family: "Inconsolata";
   src: url("fonts/Inconsolata-VariableFont_wdth\,wght.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 300 700;
   font-style: normal;
 }
 
@@ -27,11 +27,11 @@ body {
   text-align: center;
   margin-top: 1%;
   padding-left: 60px;
-  padding-right: 60px; 
+  padding-right: 60px;
 }
 
-p{
-  font-family: 'Inconsolata', monospace;
+p {
+  font-family: "Inconsolata", monospace;
   font-weight: 300;
   font-size: large;
 }
@@ -44,24 +44,28 @@ p{
   margin: auto;
 }
 
-#left{
+#left {
   margin-left: 1%;
   text-align: left;
 }
 
-h2{
+b {
+  font-family: "Inconsolata", monospace;
+}
+
+h2 {
   font-family: "VT323", monospace;
   font-size: 40px;
   text-decoration: underline #1271a9;
 }
 
-h3{
+h3 {
   font-family: "VT323", monospace;
   font-size: xx-large;
   color: #1271a9;
 }
 
-h4{
+h4 {
   font-family: "VT323", monospace;
   font-size: x-large;
 }
@@ -79,7 +83,6 @@ h1 {
     blink-caret 0.75s steps(50, end) infinite;
 }
 
-
 @keyframes typing {
   from {
     width: 0;
@@ -89,14 +92,13 @@ h1 {
   }
 }
 
-
 @keyframes blink-caret {
   from,
   to {
     border-color: transparent;
   }
   50% {
-    border-color: black; 
+    border-color: black;
   }
 }
 
@@ -106,17 +108,14 @@ body.dark-mode {
   color: white;
 }
 
-
 body.dark-mode h1 {
   border-color: white; /* Change caret color to white in dark mode */
 }
-
 
 body.dark-mode h1 {
   animation: typing 1.3s steps(10, end),
     blink-caret-dark 0.75s steps(50, end) infinite;
 }
-
 
 @keyframes blink-caret-dark {
   from,
@@ -128,7 +127,6 @@ body.dark-mode h1 {
   }
 }
 
-
 mark.blue {
   color: #1271a9;
   background: none;
@@ -137,31 +135,31 @@ mark.blue {
 }
 
 button {
-    background-color: #1271a9;
-    border: none;
-    padding: 10px 20px; /* Adjust padding for consistent button size */
-    color: white;
-    font-size: 18px;
-    font-family: "Pixelify", sans-serif;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-    border-radius: 5px;
-    min-width: 100px;
-    min-height: 40px; 
-    display: inline-block;
-    text-align: center;
-  }
-  
-  button:hover {
-    background-color: #0e5b8a;
-  }
-  
-  button.dark-mode {
-    background-color: #ffffff;
-    color: #121212;
-  }
-  
-  /* Style the header with a grey background and some padding */
+  background-color: #1271a9;
+  border: none;
+  padding: 10px 20px; /* Adjust padding for consistent button size */
+  color: white;
+  font-size: 18px;
+  font-family: "Pixelify", sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  border-radius: 5px;
+  min-width: 100px;
+  min-height: 40px;
+  display: inline-block;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #0e5b8a;
+}
+
+button.dark-mode {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+/* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
@@ -217,11 +215,13 @@ button {
 
 .about-columns {
   display: flex;
-  gap: 40px; 
+  gap: 40px;
 }
 
 .about-columns .column {
-  flex: 1;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of skill blocks */
+  gap: 10px; /* Adjust gap between skill blocks */
 }
 
 .about-columns .column p,
@@ -232,4 +232,17 @@ button {
 
 .about-columns .column p {
   margin-bottom: 10px;
+}
+
+.skill-block {
+  background-color: #1271a9;
+  font-family: "Pixelify", sans-serif;
+  border: none;
+  padding: 5px 10px; /* Adjust padding for consistent button size */
+  color: white;
+  font-size: 12px;
+  font-family: "Pixelify", sans-serif;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
 }
